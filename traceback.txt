@@ -1,0 +1,49 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 577, in script
+    "continua"
+OSError: Couldn't find file 'galo'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 577, in script
+    "continua"
+  File "E:\RENPY\renpy-8.2.2.24031001+nightly-sdk\renpy\ast.py", line 2557, in execute
+    Say.execute(self)
+  File "E:\RENPY\renpy-8.2.2.24031001+nightly-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "E:\RENPY\renpy-8.2.2.24031001+nightly-sdk\renpy\exports.py", line 1493, in say
+    who(what, *args, **kwargs)
+  File "E:\RENPY\renpy-8.2.2.24031001+nightly-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "E:\RENPY\renpy-8.2.2.24031001+nightly-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "E:\RENPY\renpy-8.2.2.24031001+nightly-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "E:\RENPY\renpy-8.2.2.24031001+nightly-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "E:\RENPY\renpy-8.2.2.24031001+nightly-sdk\renpy\display\core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "E:\RENPY\renpy-8.2.2.24031001+nightly-sdk\renpy\display\core.py", line 3022, in interact_core
+    renpy.audio.audio.periodic()
+  File "E:\RENPY\renpy-8.2.2.24031001+nightly-sdk\renpy\audio\audio.py", line 1205, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "E:\RENPY\renpy-8.2.2.24031001+nightly-sdk\renpy\audio\audio.py", line 1183, in periodic_thread_main
+    periodic_pass()
+  File "E:\RENPY\renpy-8.2.2.24031001+nightly-sdk\renpy\audio\audio.py", line 1125, in periodic_pass
+    c.periodic()
+  File "E:\RENPY\renpy-8.2.2.24031001+nightly-sdk\renpy\audio\audio.py", line 534, in periodic
+    topf = load(filename)
+  File "E:\RENPY\renpy-8.2.2.24031001+nightly-sdk\renpy\audio\audio.py", line 72, in load
+    rv = renpy.loader.load(fn, directory="audio")
+  File "E:\RENPY\renpy-8.2.2.24031001+nightly-sdk\renpy\loader.py", line 672, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'galo'.
+
+Windows-10-10.0.19043 AMD64
+Ren'Py 8.2.2.24031001+nightly
+teste22 1.0
+Sun Mar 17 12:12:11 2024
